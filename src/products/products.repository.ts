@@ -12,9 +12,9 @@ export class ProductsRepository {
   //   return this.userModel.findOne(userFilterQuery);
   // }
 
-  // async find(userFilterQuery: FilterQuery<User>): Promise<User[]> {
-  //   return this.userModel.find(userFilterQuery);
-  // }
+  async find(productFilterQuery: FilterQuery<Product>): Promise<Product[]> {
+    return this.productModel.find(productFilterQuery);
+  }
 
   async create(product: Product): Promise<Product> {
     const newProduct = new this.productModel(product);
