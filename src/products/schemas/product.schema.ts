@@ -16,6 +16,9 @@ export class Product {
 
   @Prop()
   price: string;
+
+  @Prop()
+  category: string;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
