@@ -4,4 +4,5 @@ export class CreateProductDto {
   img: string;
   price: string;
   category: string;
+  favor: number;
 }
