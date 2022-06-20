@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type ProductDocument = Product & Document;
 
-@Schema()
+@Schema({ versionKey: false })
 export class Product {
   @Prop()
   title: string;
@@ -19,6 +19,9 @@ export class Product {
 
   @Prop()
   category: string;
+
+  @Prop()
+  favor: number;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
