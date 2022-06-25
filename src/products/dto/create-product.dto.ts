@@ -5,4 +5,5 @@ export class CreateProductDto {
   price: string;
   category: string;
   favor: number;
+  shipfee: number;
 }

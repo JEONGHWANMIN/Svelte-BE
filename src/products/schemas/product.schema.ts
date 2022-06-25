@@ -22,6 +22,9 @@ export class Product {
 
   @Prop()
   favor: number;
+
+  @Prop()
+  shipfee: number;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
