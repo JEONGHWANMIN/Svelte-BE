@@ -7,7 +7,7 @@ import { Product } from './schemas/product.schema';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
-  @Post('AddProduct')
+  @Post('add')
   async createProduct(@Body() createProductDto: CreateProductDto) {
     return this.productsService.createProduct(createProductDto);
   }
