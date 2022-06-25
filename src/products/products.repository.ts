@@ -12,10 +12,12 @@ export class ProductsRepository {
   //   return this.userModel.findOne(userFilterQuery);
   // }
 
+  // 전체 상품 조회
   async find(productFilterQuery: FilterQuery<Product>): Promise<Product[]> {
     return this.productModel.find(productFilterQuery);
   }
 
+  // 상품 데이터 생성
   async create(product: Product): Promise<Product> {
     const newProduct = new this.productModel(product);
     return newProduct.save();
